@@ -5,7 +5,7 @@ import axios from 'axios';
 import L from 'leaflet';
 import './styles/Mapa.css';
 
-// Criação de ícones numerados para markers
+
 const createNumberedIcon = (number) => {
     return L.divIcon({html: `<div style="background-color: #007bff;
     color: white;
@@ -55,7 +55,7 @@ function Mapa() {
         }, {});
 
         try {
-            await axios.post('https://sua-api.com/pontos', markersPayload);
+            await axios.post('url da api aqui caralho', markersPayload);
             alert('Coordenadas enviadas com sucesso!');
             setMarkers([]);
         } catch (error) {
@@ -89,7 +89,7 @@ function Mapa() {
             </div>
 
             <div className="button-container">
-                <h3>Adicione Marcadores!</h3>
+                <h3>Adicione ao menos 3 marcadores!</h3>
                 <table className="marker-table">
 
                     <thead>
