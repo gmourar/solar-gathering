@@ -39,7 +39,7 @@ function Mapa() {
     const handleMapClick = (lat, lng) => {
         if (markers.length < 4) {
             setMarkers((prevMarkers) => [...prevMarkers, { lat, lng }]);
-            console.log(`Novo marker adicionado: Latitude: ${lat}, Longitude: ${lng}`);
+            // console.log(`Novo marker adicionado: Latitude: ${lat}, Longitude: ${lng}`);
         }
     };
 
