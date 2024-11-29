@@ -1,0 +1,88 @@
+.main {
+    display: flex;
+    height: 100vh;
+}
+
+.map-container {
+    flex: 3;
+}
+
+.button-container {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #f4f4f4;
+    padding: 20px;
+    gap: 20px;
+    overflow-y: auto;
+}
+
+.marker-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    text-align: left;
+}
+
+.marker-list li {
+    font-size: 14px;
+    margin: 5px 0;
+}
+
+.send-button,
+.clear-button {
+    padding: 15px 30px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: #007bff;
+    color: white;
+    width: 100%;
+    max-width: 200px;
+}
+
+.clear-button {
+    background-color: #dc3545;
+}
+
+.send-button:disabled,
+.clear-button:disabled {
+    background-color: #6c757d;
+    cursor: not-allowed;
+}
+
+.marker-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+    font-size: 14px;
+}
+
+.marker-table th,
+.marker-table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: center;
+}
+
+.marker-table th {
+    background-color: #007bff;
+    color: white;
+}
+
+.marker-table tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+.marker-table tr:hover {
+    background-color: #ddd;
+}
+
+.marker-table td {
+    word-break: break-word;
+}
+
