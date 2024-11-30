@@ -10,8 +10,8 @@ const createNumberedIcon = (number) => {
     return L.divIcon({html: `<div style="background-color: #007bff;
     color: white;
     border-radius: 50%;
-    width: 28px; 
-    height: 30px; 
+    width: 10px; 
+    height: 10px; 
     display: flex; 
     align-items: center; 
     justify-content: center; 
@@ -54,8 +54,12 @@ function Mapa() {
             return acc;
         }, {});
 
+        
+        const marker = {markers:markersPayload}
+        console.log(JSON.stringify(marker))
+
         try {
-            await axios.post('url da api aqui caralho', markersPayload);
+            await axios.post('http://localhost:8080/api/geo/calculate-area', marker);
             alert('Coordenadas enviadas com sucesso!');
             setMarkers([]);
         } catch (error) {
